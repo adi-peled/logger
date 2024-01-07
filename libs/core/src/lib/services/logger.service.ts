@@ -24,7 +24,6 @@ export class LoggerService {
   }
 
   private handleLog(message: Message) {
-    // if (!this.envConfig.production) return;
     if (isDevMode()) return;
     switch (this.coreConfig.logger.store) {
       case Store.LocalStorage: {
